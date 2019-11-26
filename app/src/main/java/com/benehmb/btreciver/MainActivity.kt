@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         btnSend.setOnClickListener {
             bluetooth.send(sendText.text.toString(), true)
         }
-
         bluetooth = BluetoothSPP(this)
         enableBluetooth()
 
@@ -38,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         bluetooth.setAutoConnectionListener(object : AutoConnectionListener {
             override fun onNewConnection(name: String, address: String) {
-                // Do something when earching for new connection device
+                // Do something when reaching for new connection device
             }
 
             override fun onAutoConnectionStarted() {
